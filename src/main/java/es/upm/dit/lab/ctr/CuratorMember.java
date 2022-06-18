@@ -30,8 +30,8 @@ public class CuratorMember implements Watcher{
 	private static final int CONNECTION_TIMEOUT = 2000;
 	
 	//NO FUNCIONAN LOS LOGGERS
-	String userDirectory = System.getProperty("user.dir");
-	static Logger logger = Logger.getLogger(CuratorMember.class);
+//	String userDirectory = System.getProperty("user.dir");
+//	static Logger logger = Logger.getLogger(CuratorMember.class);
 	// IF ERROR, SET THE CORRECT PATH OF A VALID log4j.properties 
 	//String log4jConfPath = userDirectory + "/src/main/java/es/upm/dit/lab/ctr/log4j.properties";
 	//boolean config_log4j = false;

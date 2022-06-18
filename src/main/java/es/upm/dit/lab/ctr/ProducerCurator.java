@@ -117,7 +117,7 @@ public class ProducerCurator implements Watcher{
 			}
 		}
 		
-		//FALTA POR HACER
+		
 		private void produce() {
 
 			for (int i = 0; i < nProductsMax; i++) {			

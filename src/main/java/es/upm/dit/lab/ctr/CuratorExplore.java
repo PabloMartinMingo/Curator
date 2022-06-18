@@ -67,14 +67,17 @@ public class CuratorExplore implements Watcher {
                             mutex.notify();
                         }
                     }
-                    else if (event.getPath().equals(rootMembers)) {
+                    
+                    else if (event.getPath().equals(rootMembers) || (event.getPath().equals(rootMembers + aMember + "0000000000"))) {
                         //listMembers = zk.getChildren(rootMembers, this, s);
                         synchronized (mutexMember) {
                             nMembers ++;
                             System.out.println("# of Members watchers: " + nMembers);
                             mutexMember.notify();
                         }
+                        
                     }
+                    
                     else if (event.getPath().equals(rootBarrier)) {
                         //listBarriers = zk.getChildren(rootBarrier, this.barrierWatcher, s);
                         synchronized (mutexBarrier) {
